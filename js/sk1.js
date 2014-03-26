@@ -16,6 +16,8 @@
 $(document).ready(function () {
     $("#calculate").click(function () {
         
+
+
         var opOne = $("#opOneID").val();
         var opTwo = $("#opTwoID").val();
         var selected = $('#mathFunction :selected').val();
