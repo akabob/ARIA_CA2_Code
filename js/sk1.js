@@ -14,25 +14,21 @@
 };
 
 $(document).ready(function () {
-    $("#convertbutton").click(function () {
-        var metricValue = $("#inputID").val();
-        // var metricValue = $("#metricinput").val();
-        var imperialValue = $("#imperialinput").val();
-        var ValueToConvert = $("#inputID").val();
-        var selected = $('#conversion :selected').val();
-        $("#ansID").val(calculate(selected, ValueToConvert));       // puts the convertion into the correct dom element on the page.
+    $("#calculate").click(function () {
+        
+        var opOne = $("#opOneID").val();
+        var opTwo = $("#opTwoID").val();
+        var selected = $('#mathFunction :selected').val();
 
-        //  $("#ansID").val(Converter.convertFromMetricToImperial(metricValue));
 
-        if (((metricValue.length != 0) && (imperialValue.length != 0))
-            || ((metricValue.length == 0) && imperialValue.length == 0)) {
-            alert("Please set one field to convert")
+        
+        
+        
+        if (opOne.length != 0) {
+            $("#resultID").val(process(selected, opOne, opTwo));      // puts the result  into the correct dom element resultID on the page.
         }
-        if (metricValue.length != 0) {
-            $("#imperialinput").val(Converter.convertFromPoundsToKIlo(metricValue));
-        }
-        else if (imperialValue.length != 0) {
-            $("#metricinput").val(Converter.convertFromMetricToImperial(imperialValue));
+        else if (opTwo.length != 0) {
+            $("#resultID").val(process(selected, opOne, opTwo));      // puts the result  into the correct dom element resultID on the page.
         }
 
 
