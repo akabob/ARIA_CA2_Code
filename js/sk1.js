@@ -38,9 +38,10 @@ $(document).ready(function () {
 
 
     });
-    $("#clearbutton").click(function () {
-        $("#inputIDt").val('');
-        $("#ansID").val('');
+    $("#clear").click(function () {
+        $("#opOneID").val('');
+        $("#opTwoID").val('');
+        $("#resultID").val('');
     });
 
     $("#pnlRemove").click(function () {
@@ -69,8 +70,8 @@ $(document).ready(function () {
 
         /* this fucntion calls the calucate funtion with the number to be converted  with the conversion type which comes from the select tag, eg pk is pounds to kilo's
         this function fires when the select dropdown box changes */
-        var opOne = $("#opOne").val();
-        var opTwo = $("#opTwo").val();
+        var opOne = $("#opOneID").val();
+        var opTwo = $("#opTwoID").val();
         var selected = $('#mathFunction :selected').val();
 
 
