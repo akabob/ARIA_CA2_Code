@@ -5,7 +5,7 @@
             var oOne = parseInt(opOne);
             var oTwo = parseInt(opTwo);
             if (isNaN(oOne) || isNaN(oTwo)) {
-                throw new Error("Not a Number !");
+                throw new Error("Not a Number");
             }
             var answer = oOne + oTwo
 
@@ -17,7 +17,7 @@
             var oOne = parseInt(opOne);
             var oTwo = parseInt(opTwo);
             if (isNaN(oOne) || isNaN(oTwo)) {
-                throw new Error("Not a Number !");
+                throw new Error("Not a Number");
             }
             var answer = oOne - oTwo
 
@@ -28,7 +28,7 @@
 
 
             if (isNaN(opOne) || isNaN(opTwo)) {
-                throw new Error("Not a Number !");
+                throw new Error("Not a Number");
             }
 
             var answer = opOne * opTwo
@@ -42,6 +42,11 @@
 
             if (isNaN(opOne) || isNaN(opTwo)) {
                 throw new Error("Not a Number");
+            }
+
+            if (opOne == 0 || opTwo == 0) {
+
+                throw new Error("Divide by Zero");
             }
 
 
